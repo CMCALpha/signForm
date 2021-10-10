@@ -27,9 +27,11 @@ const reducer =(state=initialState , action)=>{
   case (actionTypes.DECREMENT):
       return updateObject ({state ,   counter : state.counter - 1})
        
-    }      
+    }  ,
+        case (actionTypes.POWERFAT):
+    return updateObject({state , counter1 : state.counter + action.value + state.counter * 2})
      
-
+}
    return state;
 }
 export default reducer;
